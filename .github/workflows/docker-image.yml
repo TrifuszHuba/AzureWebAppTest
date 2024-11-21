@@ -21,6 +21,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: 
-        docker build . --file Dockerfile --tag ghcr.io/TrifuszHuba/azure-webapp-test:$IMAGE_TAG
-        docker login ghcr.io -u TrifuszHuba --p ${{secrets.GHCR_TOKEN}}
-        docker push ghcr.io/TrifuszHuba/azure-webapp-test:$IMAGE_TAG
+        docker build . --file Dockerfile --tag ghcr.io/trifuszhuba/azure-webapp-test:$IMAGE_TAG
+        docker login ghcr.io -u trifuszhuba -p ${{secrets.GHCR_TOKEN}}
+        docker push ghcr.io/trifuszhuba/azure-webapp-test:$IMAGE_TAG
